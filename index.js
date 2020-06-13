@@ -3,10 +3,11 @@ document.getElementById('checkVal').addEventListener('click', () => {
   let maxNum = 4950;
 
   let arr = Array.from({length: Math.floor(num/maxNum)}, () => maxNum);
-  let left = Number(num%maxNum).toFixed(2);
+  let left = Number(num%maxNum).toFixed(2).toString().replace(".", ",");
   if(left !== 0) {
     arr.push(left);
   }
+  console.log(arr);
   let val =
     `
   <div class="row">
